@@ -1,0 +1,35 @@
+# Temp files
+
+$RECYCLE.BIN/
+*.*~
+*.log
+*.pid
+*.un~
+*~
+.*.sw[a-z]
+.DS_Store
+.Spotlight-V100
+.Trashes
+.\#*
+._*
+.directory
+.elc
+/.emacs.desktop
+/.emacs.desktop.lock
+Desktop.ini
+Session.vim
+Thumbs.db
+\#*\#
+auto-save-list
+log
+logs
+temp
+tmp
+tramp
+
+# Golang generated files
+main.go
+main
+
+# Rapid testing
+save-commands.json
