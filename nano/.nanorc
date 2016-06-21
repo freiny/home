@@ -1,0 +1,8 @@
+set nowrap
+set smooth
+set autoindent
+set morespace
+set tabsize 4
+set mouse
+set const
+include "~/.nano_highlight/sh.nanorc"
