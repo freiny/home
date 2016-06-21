@@ -16,6 +16,7 @@ sudokfind(){ sudo find . -name $1 -type f; }
 sha256(){ shasum -a 256 $1; }
 nanobash(){ nano $HOME/.bash_profile; }
 nanorc(){ nano $HOME/.nanorc; }
+run(){ go clean; go build main.go; ./main; }
 #****************************************
 droot(){ cd /; }
 dapp(){ cd /Applications; }
