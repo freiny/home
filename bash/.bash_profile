@@ -1,4 +1,6 @@
 #****************************************
+export DDEVSRC=$HOME/dev/src
+#****************************************
 /(){ cd /; }
 .(){ cd ./..; }
 ..(){ cd ./../..; }
@@ -7,16 +9,17 @@
 l(){ ls -a; }
 ll(){ ls -l; }
 kclear(){ printf "\033c"; }
-kamock(){ sudo killall -v -l -d $1; }
-ka(){ sudo killall -v -l $1; }
+ka(){ killall -v -u $1 -c $2; }
 rmall(){ rm -rf $1; }
 rmds(){ find . -name ‘*.DS_Store’ -type f -delete; }
-kfind(){ find . -name $1 -type f; }
-sudokfind(){ sudo find . -name $1 -type f; }
+findfile(){ find . -name $1 -type f; }
+sudofindfile(){ sudo find . -name $1 -type f; }
+findword(){ grep -rn $1 *; }
+sudofindword(){ sudo grep -rn $1 *; }
 sha256(){ shasum -a 256 $1; }
 nanobash(){ nano $HOME/.bash_profile; }
 nanorc(){ nano $HOME/.nanorc; }
-run(){ go clean; go build main.go; ./main; }
+run(){ go clean; go build -o main; chmod 744 main; ./main; }
 #****************************************
 droot(){ cd /; }
 dapp(){ cd /Applications; }
@@ -30,8 +33,24 @@ ddown(){ cd $HOME/Downloads; }
 
 dbin(){ cd $HOME/bin; }
 ddev(){ cd $HOME/dev; }
-dhub(){ cd $HOME/dev/src/github.com; }
-dlocal(){ cd $HOME/dev/src/github.com/local; }
+
+dhub(){ cd $DDEVSRC/github.com; }
+dconf(){ cd $DDEVSRC/github.com/freiny/config; }
+dchal(){ cd $DDEVSRC/github.com/freiny/code-challenge; }
+dds(){ cd $DDEVSRC/github.com/freiny/go-datastructures; }
+dlibshow(){ cd $DDEVSRC/github.com/freiny/go-lib-show; }
+dlocal(){ cd $DDEVSRC/github.com/freiny/local; }
+dotto(){ cd $DDEVSRC/github.com/freiny/go-otto; }
+drest(){ cd $DDEVSRC/github.com/freiny/go-restapi; }
+drun(){ cd $DDEVSRC/github.com/freiny/local/run; }
+dshow(){ cd $DDEVSRC/github.com/freiny/go-show; }
+dlang(){ cd $DDEVSRC/github.com/freiny/go-show/lang; }
+dpuzzle(){ cd $DDEVSRC/github.com/freiny/go-show/puzzle; }
+dsnippet(){ cd $DDEVSRC/github.com/freiny/go-show/snippet; }
+dtrylib(){ cd $DDEVSRC/github.com/freiny/go-trylib; }
+dutil(){ cd $DDEVSRC/github.com/freiny/go-util; }
+dwin(){ cd $DDEVSRC/github.com/freiny/go-window; }
+dwinapp(){ cd $DDEVSRC/github.com/freiny/go-window-app; }
 #****************************************
 kClearCmdHistory(){ cat /dev/null > $HOME/.bash_history && history -c && exit; }
 kExport(){
@@ -48,9 +67,8 @@ kExport(){
 	export DLIB=$HOME/Library
 	export DDOWN=$HOME/Downloads
 	export DBIN=$HOME/bin
-	export DDEV=$HOME/dev
+    export DDEV=$HOME/dev
 	export DHUB=$HOME/dev/src/github.com
-	export DLOCAL=$HOME/dev/src/github.com/local
 }
 kColors(){
     export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
