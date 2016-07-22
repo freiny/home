@@ -1,0 +1,2254 @@
+name@host:~$ dv
+
+^C
+
+^C
+
+name@host:~$ dv
+
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+name@host:~$ 
+name@host:~$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-alpine            latest              80fbb231eae4        7 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
+a99a0fa3a354        f-alpine:latest     "sh -c 'apk add --upd"   7 minutes ago       Exited (0) 47 seconds ago                       cname
+
+name@host:~$ dcc
+a99a0fa3a354
+a99a0fa3a354
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~$ dcc
+"docker stop" requires at least 1 argument(s).
+See 'docker stop --help'.
+
+Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]
+
+Stop one or more running containers
+"docker rm" requires at least 1 argument(s).
+See 'docker rm --help'.
+
+Usage:  docker rm [OPTIONS] CONTAINER [CONTAINER...]
+
+Remove one or more containers
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-alpine            latest              80fbb231eae4        8 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~$ dclean
+Untagged: f-alpine:latest
+Deleted: sha256:80fbb231eae4ec551cd67ebac7b22fb2e83f10cb4e79b8ba24909e1e32f6e713
+Deleted: sha256:a1a9acf1d10f1d592cef4cdc8a548011f60b7452c8bf09dfcead1a557a9b2ff4
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~$ fdock
+name@host:~/dev/src/github.com/freiny/docker-notes$ l
+.          ..         .git       .gitignore LICENSE    README.md  alpine     f-alpine   f-go       f-node
+name@host:~/dev/src/github.com/freiny/docker-notes$ cd f-go/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ l
+.        ..       0        1        2        3        examples latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ cd latest/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ l
+.    ..   init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+Pulling repository docker.io/library/alpine
+Network timed out while trying to connect to https://index.docker.io/v1/repositories/library/alpine/images. You may want to check your internet connection or if you are behind a proxy.
+*********************************** DONE  alpine:3.4
+Unable to find image 'alpine:3.4' locally
+Pulling repository docker.io/library/alpine
+docker: Network timed out while trying to connect to https://index.docker.io/v1/repositories/library/alpine/images. You may want to check your internet connection or if you are behind a proxy..
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-alpine:latest
+Unable to find image 'f-alpine:latest' locally
+Pulling repository docker.io/library/f-alpine
+docker: Network timed out while trying to connect to https://index.docker.io/v1/repositories/library/f-alpine/images. You may want to check your internet connection or if you are behind a proxy..
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:0
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+^C
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+Pulling repository docker.io/library/alpine
+Tag 3.4 not found in repository docker.io/library/alpine
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+Unable to find image 'alpine:3.4' locally
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:5e5afae5c533273246d3ba56ccc347d077e31c936dee61ff4de64bf85e631d83
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean 
+Untagged: f-go:latest
+Deleted: sha256:5e5afae5c533273246d3ba56ccc347d077e31c936dee61ff4de64bf85e631d83
+Deleted: sha256:320e242ae86e3c60a7add6faec51e4631286d76183d48f29d604f3dff0a5c89d
+Error response from daemon: conflict: unable to delete a86de19e5be2 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 262374417f32 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 4e38e38c8ce0 (cannot be forced) - image has dependent child images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                0                   a86de19e5be2        About a minute ago   195.8 MB
+f-alpine            latest              262374417f32        2 minutes ago        9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:0
+Deleted: sha256:a86de19e5be2d8532283c28d4f0fc81c4dba299190332055da179ec392cf0e1a
+Deleted: sha256:dad951a143b1eca40de76f08dc112c9bb406bee2d6681262456cc78a317c3445
+Untagged: f-alpine:latest
+Deleted: sha256:262374417f3259e7258142cbb78b5abf41115244f0d174c87e3823abd19bbbe2
+Deleted: sha256:47f7145cf045353f4c414952cc55d2a84c616e7dc8f8da1972ffb01f670ecfa3
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:b69ede08052ce38a31dd6b5919db63365228eda1fb8845b1ac82b247b6f1183e
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+Cannot connect to the Docker daemon. Is the docker daemon running on this host?
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:b69ede08052ce38a31dd6b5919db63365228eda1fb8845b1ac82b247b6f1183e
+Deleted: sha256:a1a67d73454d952b516ac843402bd603a4e1e9ca3bd941a37e70a3269d3eb691
+Untagged: f-go:0
+Deleted: sha256:f7bc202268578071c8b4322c1a859d07bec86093c37cc66c15511b18d4dfa088
+Deleted: sha256:1cdf7df79e18f685e59a6da3562fc977af0c92f82564d146816369d25d16d173
+Untagged: f-alpine:latest
+Deleted: sha256:9c4cea772b08bf1fb56143c58b43961b8f54d5d9df17937cff652427c14775e1
+Deleted: sha256:474fc0333ba0eb769d3723edd55378b07f0402a227fcb8313e311f401f1c4c9e
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+f-go:0   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Unable to find image 'f-alpine:latest' locally
+Pulling repository docker.io/library/f-alpine
+docker: Error: image library/f-alpine:latest not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:0
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+f-go:0   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Unable to find image 'f-alpine:latest' locally
+Pulling repository docker.io/library/f-alpine
+docker: Error: image library/f-alpine:latest not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:0
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+f-go:0   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Unable to find image 'f-alpine:latest' locally
+Pulling repository docker.io/library/f-alpine
+docker: Error: image library/f-alpine:latest not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:0
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+/Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+/Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+*********************************** DONE  f-alpine:latest
+f-go:0   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+Unable to find image 'f-alpine:latest' locally
+Pulling repository docker.io/library/f-alpine
+docker: Error: image library/f-alpine:latest not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:0
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-go:0
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  f-alpine:latest
+*********************************** START  alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4/init: line 7: /Users/name/dev/src/github.com/freiny/docker-notes///init: No such file or directory
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:cd58e0ea5014260171b99ed9b8480227a692e84419beddd3432a3788ef53337f
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:cd58e0ea5014260171b99ed9b8480227a692e84419beddd3432a3788ef53337f
+Deleted: sha256:946dd2767025c30e2adfa2de04de379c4ac06aaa3df98d62db664cd44e6f0c70
+Untagged: f-go:0
+Deleted: sha256:9ca31a4f05e229883713ab99913bc7fddc7f38bf1712c3e84d13006710b5fde5
+Deleted: sha256:9e857b2243b956e578bce609a9f65749534502ab257ae3f16692216d83714d24
+Untagged: f-alpine:latest
+Deleted: sha256:1f3a72a2738e4fa049a908ade741b2eee1e6d08a17215cecb0fc78f53ea4029c
+Deleted: sha256:36881b2f1fa1c56d384e07d4a73d91a26ac9f7599fdf40467ca22dc1bc7ec784
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:0
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+/Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4/init: line 8: /Users/name/dev/src/github.com/freiny/docker-notes///init: No such file or directory
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:0087c1cbd343455d89bb7659fd3e3ad0099896ce9dfd8bc9d9f7dc93b63b96ad
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:0087c1cbd343455d89bb7659fd3e3ad0099896ce9dfd8bc9d9f7dc93b63b96ad
+Deleted: sha256:e190ba458cd2e44dc109724cfd1e7b8d786b13d4bef4ad7bbad7c293d9c98ca5
+Untagged: f-go:0
+Deleted: sha256:450a3176a2f1ebde1360d86df9f88d14c9b5134681e1b4065ca320101b2ddf27
+Deleted: sha256:6153e6297c4c5a7094f1fe4a578bf8f29a5183cd26dd192d25ca2539a78351a2
+Untagged: f-alpine:latest
+Deleted: sha256:514627cdec6aeafa9597e7006505a2db4abbe2a1decaae76b4b05f01a6f82b1c
+Deleted: sha256:269a5efb748cacbd6061c20bc05caac497793fb320a4053ce13704d11d78ee60
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:0
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:2a1fef3e390c9dd7ae406ae2de876087a770df9dc5c7decd122e7d2a1273ada4
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:2a1fef3e390c9dd7ae406ae2de876087a770df9dc5c7decd122e7d2a1273ada4
+Deleted: sha256:906573b0c94994bb72b8c35bf0ae05d20301f333461b080eb23c19ffec8405e0
+Untagged: f-go:0
+Deleted: sha256:850d5b252587b74a8df8b7d58de09e842b87137d87065e2148701824cef43ec5
+Deleted: sha256:86d35b0e90549454f9dd05668421de88cdebcb6efe16ea9228e4e51d0cfa9f24
+Untagged: f-alpine:latest
+Deleted: sha256:2c06db195ca9039723ae3d6d4da63ead38ab238fff2ff69aa15694f3ae0a1f14
+Deleted: sha256:903374400bdc2af9daaec2b453128478af971eeb293c70d09c27404d11899031
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:0
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:6fb33681c46d590f183fac39923013ef6d37ab1963356a64dbfc7f29d34337e1
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ kclean
+-bash: kclean: command not found
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              6fb33681c46d        About a minute ago   195.8 MB
+f-go                0                   c7ed740bc01f        About a minute ago   195.8 MB
+f-alpine            latest              6997fac5e6b9        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:6fb33681c46d590f183fac39923013ef6d37ab1963356a64dbfc7f29d34337e1
+Deleted: sha256:f2106f272b7e797ca521c180ac33a3ce099c144133fad693226feaf8805f9866
+Untagged: f-go:0
+Deleted: sha256:c7ed740bc01fbd271b2a3e5bd72505af11880ac2656769a0ac67fe1007b7609b
+Deleted: sha256:c8f7d609ec7cbacbee10c5f86355ce5f6569d568fd8dd59ceea2b886882b2119
+Untagged: f-alpine:latest
+Deleted: sha256:6997fac5e6b9e590e14dbf3c64bc77d670409f6950f3248c2e85ec348c4e6049
+Deleted: sha256:bc1f41a6df78d2c9d509e75422ae4b42bbb3ebd83c88872d746c2b78583e7374
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:0
+Error response from daemon: No such image: f-go:0
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:518d64f876f4d06fdbadcc62f0f1c4444f65ea28ceb5f4860627fd397405c611
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:0
+f-go:0   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/0
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+OK: 197 MiB in 18 packages
+sha256:74b07dc4d7e8e3656a0e238724e41dd1c6431ead2182ff6f93dedbc13309bf8d
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:0
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:57299befeabdc1dab4ce0264ef313a64eccf05fd4d0e9486943c81d1a3aacf54
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              57299befeabd        11 seconds ago      195.8 MB
+f-go                0                   74b07dc4d7e8        12 seconds ago      195.8 MB
+f-alpine            latest              518d64f876f4        37 seconds ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:57299befeabdc1dab4ce0264ef313a64eccf05fd4d0e9486943c81d1a3aacf54
+Deleted: sha256:b29aea7e8680e4714b5d107c9a2d5ae15675ab8da36f8903acd663415caddb3c
+Untagged: f-go:0
+Deleted: sha256:74b07dc4d7e8e3656a0e238724e41dd1c6431ead2182ff6f93dedbc13309bf8d
+Deleted: sha256:72109897a5a0e986164e744a106fd0f3b2c2debd9c0ba526a93dc0000a54e428
+Untagged: f-alpine:latest
+Deleted: sha256:518d64f876f4d06fdbadcc62f0f1c4444f65ea28ceb5f4860627fd397405c611
+Deleted: sha256:4293209195bb69bc7abd91b21d030aa90513ee480fb7b3896f43d83cadd1405f
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:91bc2364fe6a2ed09c3a00b0c2e63f63be8489591f228e0cb541299798c709f5
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+OK: 197 MiB in 18 packages
+sha256:3d9e9970be4a9431391d4f397c2b2268c4c96f1d5b1379348952b628dc9903b4
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:1
+Deleted: sha256:3d9e9970be4a9431391d4f397c2b2268c4c96f1d5b1379348952b628dc9903b4
+Deleted: sha256:0a9231c25ab1a463ccf295add787b4ff5946880ae0906cb795a6853264b759ea
+Untagged: f-alpine:latest
+Deleted: sha256:91bc2364fe6a2ed09c3a00b0c2e63f63be8489591f228e0cb541299798c709f5
+Deleted: sha256:8e080951b348b30120b121d37e4493c7f201ff44f23dbbc3b60f851af42eba55
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:b4889a1ec6fa41dc786aae23c5227dbbc0e68f67abd1ed68ad77d2de7f4f3dc9
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+OK: 197 MiB in 18 packages
+sha256:f7e9e0d2b5969f80fc41afff2926b4ba7582d47f8f96fbc03631f94a038cf208
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                1                   f7e9e0d2b596        About a minute ago   195.8 MB
+f-alpine            latest              b4889a1ec6fa        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:1
+Deleted: sha256:f7e9e0d2b5969f80fc41afff2926b4ba7582d47f8f96fbc03631f94a038cf208
+Deleted: sha256:f9172d396f5e48b5447d36cb4f7e52561b7c5d7c8e8b77e74625e6d10b42064b
+Untagged: f-alpine:latest
+Deleted: sha256:b4889a1ec6fa41dc786aae23c5227dbbc0e68f67abd1ed68ad77d2de7f4f3dc9
+Deleted: sha256:45f1c0e1ab98ba400c8efe290bf21c340d142bb3679df3a5dedbc7830a2573e9
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:4bccd58c6032e56596e4676a8520883899f3892d1fd70f084ed014f1d577191a
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/7) Installing ca-certificates (20160104-r4)
+(2/7) Installing libssh2 (1.7.0-r0)
+(3/7) Installing libcurl (7.49.1-r0)
+(4/7) Installing expat (2.1.1-r1)
+(5/7) Installing pcre (8.38-r1)
+(6/7) Installing git (2.8.3-r0)
+(7/7) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+Executing ca-certificates-20160104-r4.trigger
+OK: 215 MiB in 24 packages
+sha256:a3f938929196626f3fa174c35f16df812409f35f4bcabce5609dbfd94b56061e
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+sha256:a629157930da32dd9863cbc87d8751779496f121c00c08d9b74a6cbaed3be8db
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              a629157930da        35 seconds ago       228.1 MB
+f-go                1                   a3f938929196        47 seconds ago       213.4 MB
+f-alpine            latest              4bccd58c6032        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dclean
+Untagged: f-go:latest
+Deleted: sha256:a629157930da32dd9863cbc87d8751779496f121c00c08d9b74a6cbaed3be8db
+Deleted: sha256:d6564bbd85f2ca2cbcb18a1a6722a0b41fdc937a7ba040fd92dac52fc00a901b
+Untagged: f-go:1
+Deleted: sha256:a3f938929196626f3fa174c35f16df812409f35f4bcabce5609dbfd94b56061e
+Deleted: sha256:73021d96f5d903db0661c73bb8f8cc1a0c399a132767b95137298ce01c405b2b
+Untagged: f-alpine:latest
+Deleted: sha256:4bccd58c6032e56596e4676a8520883899f3892d1fd70f084ed014f1d577191a
+Deleted: sha256:6fe4207f0f189f8db45506660672d4b0b86be61ea1087c0dadb86d614cf3b44a
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ cv
+-bash: cv: command not found
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/latest$ .
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ .
+name@host:~/dev/src/github.com/freiny/docker-notes$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes$ .
+name@host:~/dev/src/github.com/freiny$ cd docker-
+-bash: cd: docker-: No such file or directory
+name@host:~/dev/src/github.com/freiny$ l
+.                 .gitignore        code-challenge    docker-notes      es5-notes         go-datastructures go-glExperiments  go-notes          go-restapi        go-trylib         go-window
+..                _local            config            docker-projects   freiny.github.io  go-experiments    go-lib-notes      go-otto           go-template       go-util           go-window-app
+name@host:~/dev/src/github.com/freiny$ cd docker-notes/
+name@host:~/dev/src/github.com/freiny/docker-notes$ l
+.          ..         .git       .gitignore LICENSE    README.md  alpine     f-alpine   f-go       f-node
+name@host:~/dev/src/github.com/freiny/docker-notes$ cd f-node/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node$ l
+.        ..       0        1        examples
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node$ cd examples/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples$ l
+.        ..       backend  frontend
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples$ l
+.        ..       backend  frontend
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples$ cd backend/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ l
+.    ..   code init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ ./init
+*********************************** START  f-node:1
+Error response from daemon: No such image: f-node:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:890c184070eac849d80e37860dc99e4fe1c0e01fe69f7dfb460e9f46d88dc3d5
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-node:1
+f-node:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-node/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/10) Installing libgcc (5.3.0-r0)
+(2/10) Installing libstdc++ (5.3.0-r0)
+(3/10) Installing libuv (1.9.1-r0)
+(4/10) Installing nodejs (6.2.0-r0)
+(5/10) Installing libbz2 (1.0.6-r4)
+(6/10) Installing expat (2.1.1-r1)
+(7/10) Installing libffi (3.2.1-r2)
+(8/10) Installing gdbm (1.11-r1)
+(9/10) Installing sqlite-libs (3.13.0-r0)
+(10/10) Installing python (2.7.12-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 89 MiB in 27 packages
+/usr/bin/nodemon -> /usr/lib/node_modules/nodemon/bin/nodemon.js
+/usr/lib
+`-- nodemon@1.9.2 
+  +-- chokidar@1.6.0 
+  | +-- anymatch@1.3.0 
+  | | +-- arrify@1.0.1 
+  | | `-- micromatch@2.3.11 
+  | |   +-- arr-diff@2.0.0 
+  | |   | `-- arr-flatten@1.0.1 
+  | |   +-- array-unique@0.2.1 
+  | |   +-- braces@1.8.5 
+  | |   | +-- expand-range@1.8.2 
+  | |   | | `-- fill-range@2.2.3 
+  | |   | |   +-- is-number@2.1.0 
+  | |   | |   +-- isobject@2.1.0 
+  | |   | |   +-- randomatic@1.1.5 
+  | |   | |   `-- repeat-string@1.5.4 
+  | |   | +-- preserve@0.2.0 
+  | |   | `-- repeat-element@1.1.2 
+  | |   +-- expand-brackets@0.1.5 
+  | |   | `-- is-posix-bracket@0.1.1 
+  | |   +-- extglob@0.3.2 
+  | |   +-- filename-regex@2.0.0 
+  | |   +-- kind-of@3.0.3 
+  | |   | `-- is-buffer@1.1.3 
+  | |   +-- normalize-path@2.0.1 
+  | |   +-- object.omit@2.0.0 
+  | |   | +-- for-own@0.1.4 
+  | |   | | `-- for-in@0.1.5 
+  | |   | `-- is-extendable@0.1.1 
+  | |   +-- parse-glob@3.0.4 
+  | |   | +-- glob-base@0.3.0 
+  | |   | `-- is-dotfile@1.0.2 
+  | |   `-- regex-cache@0.4.3 
+  | |     +-- is-equal-shallow@0.1.3 
+  | |     `-- is-primitive@2.0.0 
+  | +-- async-each@1.0.0 
+  | +-- glob-parent@2.0.0 
+  | +-- inherits@2.0.1 
+  | +-- is-binary-path@1.0.1 
+  | | `-- binary-extensions@1.5.0 
+  | +-- is-glob@2.0.1 
+  | | `-- is-extglob@1.0.0 
+  | +-- path-is-absolute@1.0.0 
+  | `-- readdirp@2.1.0 
+  |   +-- graceful-fs@4.1.4 
+  |   +-- readable-stream@2.1.4 
+  |   | +-- buffer-shims@1.0.0 
+  |   | +-- core-util-is@1.0.2 
+  |   | +-- isarray@1.0.0 
+  |   | +-- process-nextick-args@1.0.7 
+  |   | +-- string_decoder@0.10.31 
+  |   | `-- util-deprecate@1.0.2 
+  |   `-- set-immediate-shim@1.0.1 
+  +-- debug@2.2.0 
+  | `-- ms@0.7.1 
+  +-- es6-promise@3.2.1 
+  +-- ignore-by-default@1.0.1 
+  +-- lodash.defaults@3.1.2 
+  | +-- lodash.assign@3.2.0 
+  | | +-- lodash._baseassign@3.2.0 
+  | | | `-- lodash._basecopy@3.0.1 
+  | | +-- lodash._createassigner@3.1.1 
+  | | | +-- lodash._bindcallback@3.0.1 
+  | | | `-- lodash._isiterateecall@3.0.9 
+  | | `-- lodash.keys@3.1.2 
+  | |   +-- lodash._getnative@3.9.1 
+  | |   +-- lodash.isarguments@3.0.8 
+  | |   `-- lodash.isarray@3.0.4 
+  | `-- lodash.restparam@3.6.1 
+  +-- minimatch@3.0.2 
+  | `-- brace-expansion@1.1.5 
+  |   +-- balanced-match@0.4.2 
+  |   `-- concat-map@0.0.1 
+  +-- ps-tree@1.1.0 
+  | `-- event-stream@3.3.4 
+  |   +-- duplexer@0.1.1 
+  |   +-- from@0.1.3 
+  |   +-- map-stream@0.1.0 
+  |   +-- pause-stream@0.0.11 
+  |   +-- split@0.3.3 
+  |   +-- stream-combiner@0.0.4 
+  |   `-- through@2.3.8 
+  +-- touch@1.0.0 
+  | `-- nopt@1.0.10 
+  |   `-- abbrev@1.0.9 
+  +-- undefsafe@0.0.3 
+  `-- update-notifier@0.5.0 
+    +-- chalk@1.1.3 
+    | +-- ansi-styles@2.2.1 
+    | +-- escape-string-regexp@1.0.5 
+    | +-- has-ansi@2.0.0 
+    | | `-- ansi-regex@2.0.0 
+    | +-- strip-ansi@3.0.1 
+    | `-- supports-color@2.0.0 
+    +-- configstore@1.4.0 
+    | +-- mkdirp@0.5.1 
+    | | `-- minimist@0.0.8 
+    | +-- object-assign@4.1.0 
+    | +-- os-tmpdir@1.0.1 
+    | +-- osenv@0.1.3 
+    | | `-- os-homedir@1.0.1 
+    | +-- uuid@2.0.2 
+    | +-- write-file-atomic@1.1.4 
+    | | +-- imurmurhash@0.1.4 
+    | | `-- slide@1.1.6 
+    | `-- xdg-basedir@2.0.0 
+    +-- is-npm@1.0.0 
+    +-- latest-version@1.0.1 
+    | `-- package-json@1.2.0 
+    |   +-- got@3.3.1 
+    |   | +-- duplexify@3.4.5 
+    |   | | +-- end-of-stream@1.0.0 
+    |   | | | `-- once@1.3.3 
+    |   | | |   `-- wrappy@1.0.2 
+    |   | | `-- stream-shift@1.0.0 
+    |   | +-- infinity-agent@2.0.3 
+    |   | +-- is-redirect@1.0.0 
+    |   | +-- is-stream@1.1.0 
+    |   | +-- lowercase-keys@1.0.0 
+    |   | +-- nested-error-stacks@1.0.2 
+    |   | +-- object-assign@3.0.0 
+    |   | +-- prepend-http@1.0.4 
+    |   | +-- read-all-stream@3.1.0 
+    |   | | `-- pinkie-promise@2.0.1 
+    |   | |   `-- pinkie@2.0.4 
+    |   | `-- timed-out@2.0.0 
+    |   `-- registry-url@3.1.0 
+    |     `-- rc@1.1.6 
+    |       +-- deep-extend@0.4.1 
+    |       +-- ini@1.3.4 
+    |       +-- minimist@1.2.0 
+    |       `-- strip-json-comments@1.0.4 
+    +-- repeating@1.1.3 
+    | `-- is-finite@1.0.1 
+    |   `-- number-is-nan@1.0.0 
+    +-- semver-diff@2.1.0 
+    | `-- semver@5.3.0 
+    `-- string-length@1.0.1 
+
+npm WARN optional Skipping failed optional dependency /nodemon/chokidar/fsevents:
+npm WARN notsup Not compatible with your operating system or architecture: fsevents@1.0.14
+sha256:06042dc8c407e8c6d4b2c0769773ae111b920b341e35a0339357b430931a6ff9
+cname
+Untagged: iname:latest
+*********************************** DONE  f-node:1
+docker_web_app@1.0.0 /home/dev/code
+`-- express@4.14.0 
+  +-- accepts@1.3.3 
+  | +-- mime-types@2.1.11 
+  | | `-- mime-db@1.23.0 
+  | `-- negotiator@0.6.1 
+  +-- array-flatten@1.1.1 
+  +-- content-disposition@0.5.1 
+  +-- content-type@1.0.2 
+  +-- cookie@0.3.1 
+  +-- cookie-signature@1.0.6 
+  +-- debug@2.2.0 
+  | `-- ms@0.7.1 
+  +-- depd@1.1.0 
+  +-- encodeurl@1.0.1 
+  +-- escape-html@1.0.3 
+  +-- etag@1.7.0 
+  +-- finalhandler@0.5.0 
+  | +-- statuses@1.3.0 
+  | `-- unpipe@1.0.0 
+  +-- fresh@0.3.0 
+  +-- merge-descriptors@1.0.1 
+  +-- methods@1.1.2 
+  +-- on-finished@2.3.0 
+  | `-- ee-first@1.1.1 
+  +-- parseurl@1.3.1 
+  +-- path-to-regexp@0.1.7 
+  +-- proxy-addr@1.1.2 
+  | +-- forwarded@0.1.0 
+  | `-- ipaddr.js@1.1.1 
+  +-- qs@6.2.0 
+  +-- range-parser@1.2.0 
+  +-- send@0.14.1 
+  | +-- destroy@1.0.4 
+  | +-- http-errors@1.5.0 
+  | | +-- inherits@2.0.1 
+  | | `-- setprototypeof@1.0.1 
+  | `-- mime@1.3.4 
+  +-- serve-static@1.11.1 
+  +-- type-is@1.6.13 
+  | `-- media-typer@0.3.0 
+  +-- utils-merge@1.0.0 
+  `-- vary@1.1.0 
+
+npm WARN docker_web_app@1.0.0 No repository field.
+npm WARN docker_web_app@1.0.0 No license field.
+
+> docker_web_app@1.0.0 start /home/dev/code
+> nodemon -L /home/dev/code/server.js
+
+[nodemon] 1.9.2
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node /home/dev/code/server.js`
+Running on http://localhost:10080
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-node              1                   06042dc8c407        7 minutes ago       79.21 MB
+f-alpine            latest              890c184070ea        7 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+0329329ca181        f-node:1            "bash --login -c 'cd "   7 minutes ago       Exited (130) 6 minutes ago                       fNodeBE
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ dcc
+0329329ca181
+0329329ca181
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-node              1                   06042dc8c407        7 minutes ago       79.21 MB
+f-alpine            latest              890c184070ea        7 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ dclean
+Untagged: f-node:1
+Deleted: sha256:06042dc8c407e8c6d4b2c0769773ae111b920b341e35a0339357b430931a6ff9
+Deleted: sha256:4473408f2dec0d2b921050d5fcddb21b8c6e6d4fc2cf052a7ba3e7a576c1bc4f
+Untagged: f-alpine:latest
+Deleted: sha256:890c184070eac849d80e37860dc99e4fe1c0e01fe69f7dfb460e9f46d88dc3d5
+Deleted: sha256:58d55ec1987356533cf3fb278d01ed0cc75ecebaa12e5acea1e568851cdb9637
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node/examples/backend$ ..
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node$ l
+.        ..       0        1        examples
+name@host:~/dev/src/github.com/freiny/docker-notes/f-node$ .
+name@host:~/dev/src/github.com/freiny/docker-notes$ l
+.          ..         .git       .gitignore LICENSE    README.md  alpine     f-alpine   f-go       f-node
+name@host:~/dev/src/github.com/freiny/docker-notes$ cd f-go/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ l
+.        ..       0        1        2        3        examples latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ cd 3
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/3$ l
+.    ..   init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/3$ .
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go$ cd examples/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples$ l
+.        ..       backend  frontend
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples$ cd backend/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ls
+code init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ./init
+*********************************** START  f-go:3
+Error response from daemon: No such image: f-go:3
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:a53abccc874acd87551337b46624bbf9df1a957ce10101a1d09e6277a4747f56
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+OK: 197 MiB in 18 packages
+sha256:0e00672fe60e729c4ffb308b560aac591e2a6bacbbbd4df7e88516b56dc0e2b1
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:3
+f-go:3   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/3
+go: missing Git command. See https://golang.org/s/gogetcmd
+package github.com/codegangsta/gin: exec: "git": executable file not found in $PATH
+sha256:fd0795ca257964039003578ac6963446fae0e0817a849325126e59bde875d4c1
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:3
+Unable to find image 'f-node:1' locally
+Pulling repository docker.io/library/f-node
+docker: Error: image library/f-node:1 not found.
+See 'docker run --help'.
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dclean
+Untagged: f-go:3
+Deleted: sha256:fd0795ca257964039003578ac6963446fae0e0817a849325126e59bde875d4c1
+Deleted: sha256:b31ec7e084f5184d7e16615904c0c2c50fc6e0224010d8d43949c65d36fd683b
+Untagged: f-go:1
+Deleted: sha256:0e00672fe60e729c4ffb308b560aac591e2a6bacbbbd4df7e88516b56dc0e2b1
+Deleted: sha256:0a46b08a9657e3ccff6709d0d060b8109c510d18c6024666efba29659a0def2b
+Untagged: f-alpine:latest
+Deleted: sha256:a53abccc874acd87551337b46624bbf9df1a957ce10101a1d09e6277a4747f56
+Deleted: sha256:419d34dd7b15c1a15d9561e908487c25028b7a31c18ec4c4033de8e3df462fdd
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ./init
+*********************************** START  f-go:3
+Error response from daemon: No such image: f-go:3
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:0dfad7908bdcd9b31da055045b22ecdfbde99b5ccff3f28eac4a8446fdc6391f
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+OK: 197 MiB in 18 packages
+sha256:1e333bd894281f68020b62b107d8acd7ffc2759bf6d7bd919ea21f017e7aeb2b
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:3
+f-go:3   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/3
+Unable to find image 'f-go:0' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:0 not found.
+See 'docker run --help'.
+Error response from daemon: No such container: cname
+Error response from daemon: No such container: cname
+Error response from daemon: no such id: iname
+Error response from daemon: No such image: iname:latest
+*********************************** DONE  f-go:3
+Unable to find image 'f-go:3' locally
+Pulling repository docker.io/library/f-go
+docker: Error: image library/f-go:3 not found.
+See 'docker run --help'.
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ nano init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                1                   1e333bd89428        2 minutes ago       195.8 MB
+f-alpine            latest              0dfad7908bdc        2 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dclean
+Untagged: f-go:1
+Deleted: sha256:1e333bd894281f68020b62b107d8acd7ffc2759bf6d7bd919ea21f017e7aeb2b
+Deleted: sha256:eeffca0aa7002ad692eb26a651339b7ea76890d0f5d1f58793f0e28f50898c07
+Untagged: f-alpine:latest
+Deleted: sha256:0dfad7908bdcd9b31da055045b22ecdfbde99b5ccff3f28eac4a8446fdc6391f
+Deleted: sha256:331ab7c940fec70ff54fc1d84253c9221b301446ec717f1420a405e0e3b18306
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:feb59a8b83645750daad60872d7e62bcce2a27d5cd960bd88e6e1e7ecffd7cbe
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/7) Installing ca-certificates (20160104-r4)
+(2/7) Installing libssh2 (1.7.0-r0)
+(3/7) Installing libcurl (7.49.1-r0)
+(4/7) Installing expat (2.1.1-r1)
+(5/7) Installing pcre (8.38-r1)
+(6/7) Installing git (2.8.3-r0)
+(7/7) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+Executing ca-certificates-20160104-r4.trigger
+OK: 215 MiB in 24 packages
+sha256:33e2a722cf52c74969a5451a4db5ebb3749962b616a97dc142fd939ca7e98136
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+sha256:d793d0bd3be0c8cf86fd9483bf19ac22e62a6e7e034828cf50e73c4b8ddfde80
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              d793d0bd3be0        About a minute ago   228.1 MB
+f-go                1                   33e2a722cf52        About a minute ago   213.4 MB
+f-alpine            latest              feb59a8b8364        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                       PORTS               NAMES
+9aeb519e90be        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 6 seconds ago                       fGoBE
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dcc
+9aeb519e90be
+9aeb519e90be
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dclean
+Untagged: f-go:latest
+Deleted: sha256:d793d0bd3be0c8cf86fd9483bf19ac22e62a6e7e034828cf50e73c4b8ddfde80
+Deleted: sha256:6eef225e7abd2b8d9c43db70a0bea7ca1ef1018621b5962aa63ebd7f878d2350
+Untagged: f-go:1
+Deleted: sha256:33e2a722cf52c74969a5451a4db5ebb3749962b616a97dc142fd939ca7e98136
+Deleted: sha256:46aff687946206ba12879502d5fa9f40e6e00a2621875c847eace3bbbecc073d
+Untagged: f-alpine:latest
+Deleted: sha256:feb59a8b83645750daad60872d7e62bcce2a27d5cd960bd88e6e1e7ecffd7cbe
+Deleted: sha256:589c20156739ac3051c29328c7518b28ae1817cec3f46530d8a86715ddf6cf86
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:b73e0fcb4146e1bc87f301e8fb248721fc7cfd9040ab633fa86767fce7732656
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/7) Installing ca-certificates (20160104-r4)
+(2/7) Installing libssh2 (1.7.0-r0)
+(3/7) Installing libcurl (7.49.1-r0)
+(4/7) Installing expat (2.1.1-r1)
+(5/7) Installing pcre (8.38-r1)
+(6/7) Installing git (2.8.3-r0)
+(7/7) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+Executing ca-certificates-20160104-r4.trigger
+OK: 215 MiB in 24 packages
+sha256:61b56ec7e38b42445c0c9c72d5306edca7485d2d41141f224102a5be3c3702b2
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+sha256:709103a2d0db4cba706b038a90624d4d9a962363e245f39dd524c4a49f6e6953
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED                  SIZE
+f-go                latest              709103a2d0db        Less than a second ago   228.1 MB
+f-go                1                   61b56ec7e38b        4 seconds ago            213.4 MB
+f-alpine            latest              b73e0fcb4146        31 seconds ago           9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago              4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ chmod 744 run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              709103a2d0db        7 seconds ago       228.1 MB
+f-go                1                   61b56ec7e38b        14 seconds ago      213.4 MB
+f-alpine            latest              b73e0fcb4146        41 seconds ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ ./run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dclean
+Error response from daemon: conflict: unable to delete 709103a2d0db (must be forced) - image is being used by stopped container 50d865fc50ea
+Error response from daemon: conflict: unable to delete 61b56ec7e38b (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete b73e0fcb4146 (cannot be forced) - image has dependent child images
+Error response from daemon: conflict: unable to delete 4e38e38c8ce0 (cannot be forced) - image has dependent child images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              709103a2d0db        3 minutes ago       228.1 MB
+f-go                1                   61b56ec7e38b        4 minutes ago       213.4 MB
+f-alpine            latest              b73e0fcb4146        4 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+50d865fc50ea        f-go:latest         "bash --login -c 'cd "   3 minutes ago       Exited (130) 3 minutes ago                       fgobe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dcc
+50d865fc50ea
+50d865fc50ea
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dclean
+Untagged: f-go:latest
+Deleted: sha256:709103a2d0db4cba706b038a90624d4d9a962363e245f39dd524c4a49f6e6953
+Deleted: sha256:49cda35c0d2553027337587166b60e5576f321737d2d858265574b9ab0679a78
+Untagged: f-go:1
+Deleted: sha256:61b56ec7e38b42445c0c9c72d5306edca7485d2d41141f224102a5be3c3702b2
+Deleted: sha256:76edd1050e630368704f1f2d9918531d96130768d9c7caa4f05a01c839ebe5d4
+Untagged: f-alpine:latest
+Deleted: sha256:b73e0fcb4146e1bc87f301e8fb248721fc7cfd9040ab633fa86767fce7732656
+Deleted: sha256:7be0d1757602e7dcf2b30f3856181093d6368411125beda92d149bf151da23ce
+Untagged: alpine:3.4
+Deleted: sha256:4e38e38c8ce0b8d9041a9c4fefe786631d1416225e13b0bfe8cfa2321aec4bba
+Deleted: sha256:4fe15f8d0ae69e169824f25f1d4da3015a48feeeeebb265cd2e328e15c6a869f
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ .
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples$ cd frontend/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ chmod 744 init
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ chmod 744 run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./init
+*********************************** START  f-go:latest
+Error response from daemon: No such image: f-go:latest
+*********************************** START  f-go:1
+Error response from daemon: No such image: f-go:1
+*********************************** START  f-alpine:latest
+Error response from daemon: No such image: f-alpine:latest
+*********************************** START  alpine:3.4
+Error response from daemon: No such image: alpine:3.4
+*********************************** RUNNING  alpine:3.4
+alpine:3.4   /Users/name/dev/src/github.com/freiny/docker-notes/alpine/3.4
+3.4: Pulling from library/alpine
+e110a4a17941: Pull complete 
+Digest: sha256:3dcdb92d7432d56604d4545cbd324b14e647b313626d99b889d0626de158f73a
+Status: Downloaded newer image for alpine:3.4
+*********************************** DONE  alpine:3.4
+*********************************** RUNNING  f-alpine:latest
+f-alpine:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-alpine/latest
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/5) Installing ncurses-terminfo-base (6.0-r7)
+(2/5) Installing ncurses-terminfo (6.0-r7)
+(3/5) Installing ncurses-libs (6.0-r7)
+(4/5) Installing readline (6.3.008-r4)
+(5/5) Installing bash (4.3.42-r3)
+Executing bash-4.3.42-r3.post-install
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 16 packages
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing nano (2.5.3-r0)
+Executing busybox-1.24.2-r9.trigger
+OK: 13 MiB in 17 packages
+mkdir: can't create directory '/home/dev': File exists
+sha256:e2458da1057db2d6049a32fb79c9a8e84890395235d806813c7937317f8c01b9
+cname
+Untagged: iname:latest
+*********************************** DONE  f-alpine:latest
+*********************************** RUNNING  f-go:1
+f-go:1   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/1
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.4/community/x86_64/APKINDEX.tar.gz
+(1/7) Installing ca-certificates (20160104-r4)
+(2/7) Installing libssh2 (1.7.0-r0)
+(3/7) Installing libcurl (7.49.1-r0)
+(4/7) Installing expat (2.1.1-r1)
+(5/7) Installing pcre (8.38-r1)
+(6/7) Installing git (2.8.3-r0)
+(7/7) Installing go (1.6.2-r4)
+Executing busybox-1.24.2-r9.trigger
+Executing ca-certificates-20160104-r4.trigger
+OK: 215 MiB in 24 packages
+sha256:5d846f727de8cf66ff531580ecdef8c73f5cf4c696e5c73c241632ab05db6006
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:1
+*********************************** RUNNING  f-go:latest
+f-go:latest   /Users/name/dev/src/github.com/freiny/docker-notes/f-go/latest
+sha256:38ef55e2562d3bf443248d86f9aa4158fba514f73f5973dca392d18b3dc61620
+cname
+Untagged: iname:latest
+*********************************** DONE  f-go:latest
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+docker: Error response from daemon: Mounts denied: 
+The path /Users/name/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code
+is not shared from OS X and does not belong to the system.
+You can configure shared paths from Docker -> Preferences...
+..
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+docker: Error response from daemon: Conflict. The name "/fgofe" is already in use by container 4587eebdc9bcd96b4445512180ed2b404840998e0289a9302c4c4d2954881f0b. You have to remove (or rename) that container to be able to reuse that name..
+See 'docker run --help'.
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              38ef55e2562d        57 seconds ago       228.1 MB
+f-go                1                   5d846f727de8        About a minute ago   213.4 MB
+f-alpine            latest              e2458da1057d        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+4587eebdc9bc        f-go:latest         "bash --login -c 'cd "   50 seconds ago      Created                                 fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+4587eebdc9bc
+4587eebdc9bc
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              38ef55e2562d        59 seconds ago       228.1 MB
+f-go                1                   5d846f727de8        About a minute ago   213.4 MB
+f-alpine            latest              e2458da1057d        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+stat server.go: no such file or directory
+bash: ./server: No such file or directory
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED              SIZE
+f-go                latest              38ef55e2562d        About a minute ago   228.1 MB
+f-go                1                   5d846f727de8        About a minute ago   213.4 MB
+f-alpine            latest              e2458da1057d        About a minute ago   9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago          4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+79e9a121b8e4        f-go:latest         "bash --login -c 'cd "   5 seconds ago       Exited (127) 3 seconds ago                       fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+79e9a121b8e4
+79e9a121b8e4
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        2 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        2 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        3 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        3 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        3 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        4 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS               NAMES
+7d150a15ea21        f-go:latest         "bash --login -c 'cd "   59 seconds ago      Exited (130) 2 seconds ago                       fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+7d150a15ea21
+7d150a15ea21
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        4 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        4 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        5 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        4 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        5 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        5 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ .
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples$ cd backend/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/backend$ .
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples$ cd frontend/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ 
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ././run
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        8 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        8 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        8 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                       PORTS                      NAMES
+459c0e414b18        f-go:latest         "bash --login -c 'cd "   8 seconds ago       Exited (130) 1 seconds ago                              fgofe
+78af20bea63d        f-go:latest         "bash --login -c 'cd "   36 seconds ago      Up 35 seconds                0.0.0.0:10080->10080/tcp   fgobe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+459c0e414b18
+78af20bea63d
+459c0e414b18
+78af20bea63d
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        8 minutes ago       228.1 MB
+f-go                1                   5d846f727de8        8 minutes ago       213.4 MB
+f-alpine            latest              e2458da1057d        8 minutes ago       9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+^Cdv
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ 
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        11 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        11 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        11 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                            PORTS               NAMES
+a61189c04b0b        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 3 seconds ago                            fgobe
+41a50588f2ec        f-go:latest         "bash --login -c 'cd "   2 minutes ago        Exited (130) About a minute ago                       fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+a61189c04b0b
+41a50588f2ec
+a61189c04b0b
+41a50588f2ec
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+^Cname@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        12 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        12 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        12 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                       PORTS               NAMES
+e361b3e3e969        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 1 seconds ago                       fgofe
+e1355afcffe4        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 3 seconds ago                       fgobe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dcc
+e361b3e3e969
+e1355afcffe4
+e361b3e3e969
+e1355afcffe4
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        12 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        12 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        12 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ ./run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ 
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        13 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        13 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        14 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                        PORTS               NAMES
+800a38216e00        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 43 seconds ago                       fgobe
+89a4f7a24692        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 41 seconds ago                       fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ l
+.    ..   code init run
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend$ cd code/
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ l
+.         ..        public    server    server.go
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ rm server
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        13 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        14 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        14 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS                        PORTS               NAMES
+800a38216e00        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 54 seconds ago                       fgobe
+89a4f7a24692        f-go:latest         "bash --login -c 'cd "   About a minute ago   Exited (130) 52 seconds ago                       fgofe
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dcc
+800a38216e00
+89a4f7a24692
+800a38216e00
+89a4f7a24692
+"docker rmi" requires at least 1 argument(s).
+See 'docker rmi --help'.
+
+Usage:  docker rmi [OPTIONS] IMAGE [IMAGE...]
+
+Remove one or more images
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        13 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        14 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        14 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ l
+.         ..        public    server.go
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build server.go main
+named files must be .go files
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build server.go -o main
+named files must be .go files
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        14 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        14 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        15 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build --help
+usage: build [-o output] [-i] [build flags] [packages]
+
+Build compiles the packages named by the import paths,
+along with their dependencies, but it does not install the results.
+
+If the arguments to build are a list of .go files, build treats
+them as a list of source files specifying a single package.
+
+When compiling a single main package, build writes
+the resulting executable to an output file named after
+the first source file ('go build ed.go rx.go' writes 'ed' or 'ed.exe')
+or the source code directory ('go build unix/sam' writes 'sam' or 'sam.exe').
+The '.exe' suffix is added when writing a Windows executable.
+
+When compiling multiple packages or a single non-main package,
+build compiles the packages but discards the resulting object,
+serving only as a check that the packages can be built.
+
+The -o flag, only allowed when compiling a single package,
+forces build to write the resulting executable or object
+to the named output file, instead of the default behavior described
+in the last two paragraphs.
+
+The -i flag installs the packages that are dependencies of the target.
+
+The build flags are shared by the build, clean, get, install, list, run,
+and test commands:
+
+	-a
+		force rebuilding of packages that are already up-to-date.
+	-n
+		print the commands but do not run them.
+	-p n
+		the number of programs, such as build commands or
+		test binaries, that can be run in parallel.
+		The default is the number of CPUs available, except
+		on darwin/arm which defaults to 1.
+	-race
+		enable data race detection.
+		Supported only on linux/amd64, freebsd/amd64, darwin/amd64 and windows/amd64.
+	-msan
+		enable interoperation with memory sanitizer.
+		Supported only on linux/amd64,
+		and only with Clang/LLVM as the host C compiler.
+	-v
+		print the names of packages as they are compiled.
+	-work
+		print the name of the temporary work directory and
+		do not delete it when exiting.
+	-x
+		print the commands.
+
+	-asmflags 'flag list'
+		arguments to pass on each go tool asm invocation.
+	-buildmode mode
+		build mode to use. See 'go help buildmode' for more.
+	-compiler name
+		name of compiler to use, as in runtime.Compiler (gccgo or gc).
+	-gccgoflags 'arg list'
+		arguments to pass on each gccgo compiler/linker invocation.
+	-gcflags 'arg list'
+		arguments to pass on each go tool compile invocation.
+	-installsuffix suffix
+		a suffix to use in the name of the package installation directory,
+		in order to keep output separate from default builds.
+		If using the -race flag, the install suffix is automatically set to race
+		or, if set explicitly, has _race appended to it.  Likewise for the -msan
+		flag.  Using a -buildmode option that requires non-default compile flags
+		has a similar effect.
+	-ldflags 'flag list'
+		arguments to pass on each go tool link invocation.
+	-linkshared
+		link against shared libraries previously created with
+		-buildmode=shared.
+	-pkgdir dir
+		install and load all packages from dir instead of the usual locations.
+		For example, when building with a non-standard configuration,
+		use -pkgdir to keep generated packages in a separate location.
+	-tags 'tag list'
+		a list of build tags to consider satisfied during the build.
+		For more information about build tags, see the description of
+		build constraints in the documentation for the go/build package.
+	-toolexec 'cmd args'
+		a program to use to invoke toolchain programs like vet and asm.
+		For example, instead of running asm, the go command will run
+		'cmd args /path/to/asm <arguments for asm>'.
+
+The list flags accept a space-separated list of strings. To embed spaces
+in an element in the list, surround it with either single or double quotes.
+
+For more about specifying packages, see 'go help packages'.
+For more about where packages and binaries are installed,
+run 'go help gopath'.
+For more about calling between Go and C/C++, run 'go help c'.
+
+Note: Build adheres to certain conventions such as those described
+by 'go help gopath'. Not all projects can follow these conventions,
+however. Installations that have their own conventions or that use
+a separate software build system may choose to use lower-level
+invocations such as 'go tool compile' and 'go tool link' to avoid
+some of the overheads and design decisions of the build tool.
+
+See also: go install, go get, go clean.
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build -o main
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        15 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        15 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        16 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ l
+.         ..        main      public    server.go
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ rm main
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ dv
+
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+f-go                latest              38ef55e2562d        15 minutes ago      228.1 MB
+f-go                1                   5d846f727de8        16 minutes ago      213.4 MB
+f-alpine            latest              e2458da1057d        16 minutes ago      9.203 MB
+alpine              3.4                 4e38e38c8ce0        3 weeks ago         4.799 MB
+
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ l
+.         ..        public    server.go
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build -o main.go main
+can't load package: package main: cannot find package "main" in any of:
+	/usr/local/go/src/main (from $GOROOT)
+	/Users/name/dev/src/main (from $GOPATH)
+name@host:~/dev/src/github.com/freiny/docker-notes/f-go/examples/frontend/code$ go build -o main
