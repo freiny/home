@@ -4,6 +4,10 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/dev/bin
 export PATH=$PATH:/usr/local/go/bin
 #****************************************
+alias dk="docker "
+alias dc="docker-compose "
+#****************************************
+# Folder Echo: f <Folder Abbreviation> <Sub-Folder>
 f(){
 	local home=~
 
@@ -11,34 +15,49 @@ f(){
 		# ---------------------------------------------------
 		j)	echo ~/dev/src/github.com/freiny/docker-scripts/f-alpine/0;;
 		# ---------------------------------------------------
-		/|root)		echo "/";;
-		tmp)		echo "/tmp";;
-		etc)		echo "/etc";;
-		app)		echo "/Applications";;
-		users)		echo "/Users";;
-		desk)		echo "$home/Desktop";;
-		doc)		echo "$home/Documents";;
-		lib)		echo "$home/Library";;
-		down)		echo "$home/Downloads";;
-		bin)		echo "$home/bin";;
-		dev)		echo "$home/dev";;
-		hub)		echo "$home/dev/src/github.com";;
-		freiny|f)	echo "$home/dev/src/github.com/freiny";;
-		local|l)	echo "$home/dev/src/github.com/freiny/_local";;
+		/|root)		echo "/$2";;
+		tmp)		echo "/tmp/$2";;
+		etc)		echo "/etc/$2";;
+		app)		echo "/Applications/$2";;
+		users)		echo "/Users/$2";;
+		desk)		echo "$home/Desktop/$2";;
+		doc)		echo "$home/Documents/$2";;
+		lib)		echo "$home/Library/$2";;
+		down)		echo "$home/Downloads/$2";;
+		bin)		echo "$home/bin/$2";;
+		dev)		echo "$home/dev/$2";;
+		hub|github)	echo "$home/dev/src/github.com/$2";;
+		freiny|f)	echo "$home/dev/src/github.com/freiny/$2";;
+		local|l)	echo "$home/dev/src/github.com/freiny/_local/$2";;
 		# ---------------------------------------------------
-		dock|docks)	echo "$home/dev/src/github.com/freiny/docker-scripts";;
-		docki)		echo "$home/dev/src/github.com/freiny/_local/docker/images";;
+		scripts|docks|dock)	echo "$home/dev/src/github.com/freiny/docker-scripts/$2";;
+		images|docki)		echo "$home/dev/src/github.com/freiny/_local/docker/images/$2";;
 		# ---------------------------------------------------
-		conf)		echo "$home/dev/src/github.com/freiny/config";;
-		bash)		echo "$home/dev/src/github.com/freiny/config/bash-host";;
-		nano)		echo "$home/dev/src/github.com/freiny/config/nano";;
+		conf)		echo "$home/dev/src/github.com/freiny/config/$2";;
+		bash)		echo "$home/dev/src/github.com/freiny/config/bash-host/$2";;
+		nano)		echo "$home/dev/src/github.com/freiny/config/nano/$2";;
+		alpine)		echo "$home/dev/src/github.com/freiny/docker-scripts/alpine/$2";;
+		f-alpine)	echo "$home/dev/src/github.com/freiny/docker-scripts/f-alpine/$2";;
+		f-go)		echo "$home/dev/src/github.com/freiny/docker-scripts/f-go/$2";;
 		# ---------------------------------------------------
-		*|""|~|home) echo ~
+		-help|--help|-h|--h)	echo "Folder Echo: f <Folder Abbreviation> <Sub-Folder>";;
+		# ---------------------------------------------------
+		""|~|home)	echo ~/$2;;
+		.)			echo $2;;
+		*)			echo $1
+	esac
+}
+# ================================
+# Jump To Folder: j <Folder Abbreviation> <Sub-Folder>
+j(){
+	case $1 in
+		-help|--help|-h|--h)	echo "Jump To Folder: j <Folder Abbreviation> <Sub-Folder>";;
+		*)						cd "$(f $1 $2)";
 	esac
 }
 
-j(){ cd "$(f $1)"; }
-
+# ================================
+# Custom Command Executor: k <Command>
 k(){
 	local home=~
 
@@ -68,9 +87,70 @@ k(){
 		;;
 		gitEditor)	git config --global core.editor "nano";;
 		# ---------------------------------------------------
-		*|"")	echo "Command Executor: k <Command>"
+		newScript)	touch $2; echo "#!/bin/bash" >> $2; chmod 744 $2; nano $2;;
+		# ---------------------------------------------------
+		*|"")	echo "Custom Command Executor: k <Command>"
 	esac
 }
+# ================================
+# Docker Custom Command Executor: d <Command>
+d(){
+	local home=~
+
+	case $1 in
+		# ---------------------------------------------------
+		load)	dLoad $2 $3 $4 $5;;
+		run)	docker run -it $2 /bin/bash;;
+		rm)		rmia;;
+		rmi)	rmi $2 $3;;
+		RMI)	RMI $2 $3;;
+		vi)		docker images -a;;
+		vc)		docker ps -a;;
+		v)		echo
+				docker images -a
+				echo
+				docker ps -a
+				echo
+				;;
+		cc)		docker stop $(docker ps -a -q)
+				docker rm $(docker ps -a -q)
+				docker rmi $(docker images -f "dangling=true" -q)
+				;;
+		ci)		docker rm -f $1
+				docker rmi -f $1
+				docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
+				;;
+		c)		docker stop $(docker ps -a -q)
+				docker rm $(docker ps -a -q)
+				docker rmi $(docker images -f "dangling=true" -q)
+				docker rm -f $1
+				docker rmi -f $1
+				docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
+				;;
+		dr)		docker run --name cname --user="dev" -it $2 bash --login;;
+		db)		docker build -t $2 .;;
+		# ---------------------------------------------------
+		*|"")	echo "Docker Custom Command Executor: d <Command>"
+	esac
+}
+
+#****************************************
+g(){
+	local home=~
+
+	case $1 in
+		# ---------------------------------------------------
+		s)		git status $2;;
+		a)		git add $2;;
+		c)		git commit $2;;
+		d)		git diff $2;;
+		l)		git log;;
+		pom)	git push origin master;;
+		# ---------------------------------------------------
+		*|"")	echo "Git Custom Command Executor: g <Command>"
+	esac
+}
+
 #****************************************
 source $(f docks)/fdockerutil.sh
 #****************************************
@@ -78,50 +158,8 @@ source $(f docks)/fdockerutil.sh
 .()				{ cd ./..; }
 ..()			{ cd ./../..; }
 ...()			{ cd ./../../..; }
-....()			{ cd ./../../../..; }
 l()				{ ls -a; }
 ll()			{ ls -l; }
-#****************************************
-gs()	{ git status $1; }
-ga()	{ git add $1; }
-gc()	{ git commit $1; }
-gd()	{ git diff $1; }
-gl()	{ git log; }
-gpom()	{ git push origin master; }
-#****************************************
-alias d="docker "
-dr(){ docker run --name cname --user="dev" -it $1 bash --login; }
-
-dcc(){
-	docker stop $(docker ps -a -q)
-	docker rm $(docker ps -a -q)
-	docker rmi $(docker images -f "dangling=true" -q)
-}
-dci(){
-	docker rm -f $1
-	docker rmi -f $1
-	docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
-}
-dc(){
-	docker stop $(docker ps -a -q)
-	docker rm $(docker ps -a -q)
-	docker rmi $(docker images -f "dangling=true" -q)
-	docker rm -f $1
-	docker rmi -f $1
-	docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
-}
-dvi(){ docker images -a; }
-dvc(){ docker ps -a; }
-dv(){
-	echo
-	docker images -a
-	echo
-	docker ps -a
-	echo
-}
-
-db(){ docker build -t $1 .; }
-#alias dc="docker-compose "
 #****************************************
 # INIT
 k clear
