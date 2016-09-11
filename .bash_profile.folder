@@ -1,0 +1,63 @@
+#!/bin/bash
+
+#****************************************
+# Folder Echo: f <Folder Abbreviation> <Sub-Folder>
+f(){
+	local home=~
+
+	case $1 in
+	# ---------------------------------------------------
+	# j)  echo $GITHUB_USER_PATH/dockerpack-apps/$2;;
+	# j)  echo $GITHUB_USER_PATH/koderkave-fe-conf/$2;;
+	# j)  echo $GITHUB_USER_PATH/gce-deb-erlang/$2;;
+	j)  echo $GITHUB_USER_PATH/erlang-notes/$2;;
+	f)	docker exec -it koderkavefeconf_rp1_1 /bin/bash && docker start koderkavefeconf_rp1_1;;
+	g)	docker stop koderkavefeconf_rp1_1; docker start koderkavefeconf_rp1_1;;
+	# ---------------------------------------------------
+	/|root)	echo /$2;;
+	tmp)		echo /tmp/$2;;
+	etc)		echo /etc/$2;;
+	app)		echo /Applications/$2;;
+	desk)		echo ~/Desktop/$2;;
+	doc)		echo ~/Documents/$2;;
+	lib)		echo ~/Library/$2;;
+	down)		echo ~/Downloads/$2;;
+	bin)		echo ~/bin/$2;;
+	hdev)		echo ~/dev/$2;;
+	# ---------------------------------------------------
+	hub|github)  echo ~/dev/src/github.com/$2;;
+	fhub)  echo $GITHUB_USER_PATH/$2;;
+	local)  echo $GITHUB_USER_PATH/_local/$2;;
+	# ---------------------------------------------------
+	users)    echo ~/users/$2;;
+	freiny)  echo ~/users/freiny/$2;;
+	# ---------------------------------------------------
+	scripts)  echo $DOCKER_SCRIPTS/$2;;
+	launch)  echo $DOCKER_LAUNCH/$2;;
+	images)  echo $DOCKER_IMAGES/$2;;
+	cluster)  echo $GITHUB_USER_PATH/docker-scripts/cluster/$2;;
+	cluster2)  echo $GITHUB_USER_PATH/docker-projects/cluster2/$2;;
+	c)  echo $GITHUB_USER_PATH/docker-scripts/c/$2;;
+	# ---------------------------------------------------
+	conf)    echo $GITHUB_USER_PATH/config/$2;;
+	bash)    echo $GITHUB_USER_PATH/config/bash-host/$2;;
+	nano)    echo $GITHUB_USER_PATH/config/nano/$2;;
+	alpine)    echo $GITHUB_USER_PATH/docker-scripts/alpine/$2;;
+	go)      echo $GITHUB_USER_PATH/docker-scripts/go/$2;;
+	dev)    echo $GITHUB_USER_PATH/docker-scripts/dev/$2;;
+	# ---------------------------------------------------
+	-help|--help|-h|--h)  echo "Folder Echo: f <Folder Abbreviation> <Sub-Folder>";;
+	# ---------------------------------------------------
+	""|~|home)  echo ~/$2;;
+	.)      echo $2;;
+	*)      echo $1
+	esac
+}
+# ================================
+# Jump To Folder: j <Folder Abbreviation> <Sub-Folder>
+j(){
+  case $1 in
+    -help|--help|-h|--h)  echo "Jump To Folder: j <Folder Abbreviation> <Sub-Folder>";;
+    *)            cd "$(f $1 $2)";
+  esac
+}

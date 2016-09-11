@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#****************************************
+g(){
+  local home=~
+
+  case $1 in
+    # ---------------------------------------------------
+    s)    git status $2;;
+    a)    git add $2;;
+    c)    git commit $2;;
+    d)    git diff $2;;
+    l)    git log;;
+    pom)  git push origin master;;
+    # ---------------------------------------------------
+    *|"")  echo "Git Custom Command Executor: g <Command>"
+  esac
+}
+
+export GITHUB_USER_PATH=~/dev/src/github.com/freiny

@@ -1,0 +1,100 @@
+#!/bin/bash
+#****************************************
+# Freiny Docker Utility - Custom Command Executor: fdu <Command> [Arguments...]
+
+alias d="fdu "
+alias dk="docker "
+alias dc="docker-compose "
+
+fdu(){
+  case $1 in
+    # ---------------------------------------------------
+		dev|d)
+			docker-compose -f ./dev.yml up
+		;;
+		prod|p)
+ 			docker-compose -f ./prod.yml up
+		;;
+    rmc)
+      #Remove all docker containers
+      docker stop $(docker ps -a -q)
+      docker rm $(docker ps -a -q)
+      docker rmi $(docker images -f "dangling=true" -q)
+    ;;
+    rmi)
+      #Remove all loaded docker images
+      if [[ $2 == "" ]]; then
+        docker rmi $(docker images -a -q)
+      else
+        docker rmi $2:$3
+      fi
+    ;;
+    RMI)
+      # Remove all gzipped docker images in your docker images folder
+      if [[ $2 == "" ]]; then
+        rm -- ~/docker/images/*.*
+      else
+        rm -- ~/docker/images/$2-$3.tgz
+      fi
+    ;;
+    rm)
+      # Remove all containers, loaded images, and gzipped images
+      d rmc
+      d rmi $2 $3
+      d RMI $2 $3
+    ;;
+    vi)
+      # View images
+      docker images -a;;
+    VI)
+      # View gzipped images
+      tpwd=$PWD;cd $(f images);ls -a;cd $tpwd;;
+    vc)
+      # View containers
+      docker ps -a;;
+    v)
+      # View images, containers, and gzipped images
+      echo
+      docker images -a
+      echo
+      docker ps -a
+      echo
+      ls -a ~/docker/images;
+      echo
+    ;;
+    clearc|cc)
+      # Clear containers
+      docker stop $(docker ps -a -q)
+      docker rm $(docker ps -a -q)
+      docker rmi $(docker images -f "dangling=true" -q)
+    ;;
+    cleari|ci)
+      # Clear images
+      docker rm -f $1
+      docker rmi -f $1
+      docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
+    ;;
+    clear)
+      # Clear containers and images
+      docker stop $(docker ps -a -q)
+      docker rm $(docker ps -a -q)
+      docker rmi $(docker images -f "dangling=true" -q)
+      docker rm -f $1
+      docker rmi -f $1
+      docker rmi -f $(docker images -a | grep "<none>" | cut "-c41-52")
+    ;;
+		ssh)
+			# dk exec -it deploy_rp1_1 sh && dk stop deploy_rp1_1 && dk start deploy_rp1_1
+			dk exec -it deploy_rp1_1 /bin/bash
+		;;
+		sshdev)
+			# dk exec -it koderkavefeconf_rp1_1 /bin/bash && dk stop koderkavefeconf_rp1_1 && dk start koderkavefeconf_rp1_1
+			dk exec -it koderkavefeconf_rp1_1 /bin/bash && dk start koderkavefeconf_rp1_1
+		;;
+		rpdev)
+			dk start koderkavefeconf_rp1_1
+		;;
+    # ---------------------------------------------------
+    *|"")    echo "Freiny Docker Utility - Custom Command Executor: fdu <Command> [Arguments...]"
+  esac
+}

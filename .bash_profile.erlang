@@ -1,0 +1,19 @@
+#!/bin/bash
+
+#****************************************
+e(){
+  case $1 in
+    # ---------------------------------------------------
+		build|b)
+			k rmGlob "*.beam"
+			for each in ./*.erl; do
+				erlc $each
+			done
+		;;
+		run|r)
+			erl -mode Embedded -pa ./ -s entry init;
+		;;
+    # ---------------------------------------------------
+    *|"")  echo "Erlang Custom Command Executor: e <Command>"
+  esac
+}
