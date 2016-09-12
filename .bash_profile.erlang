@@ -4,16 +4,26 @@
 e(){
   case $1 in
     # ---------------------------------------------------
-		build|b)
+		clean|c)
 			k rmGlob "*.beam"
+			k rmGlob "*.dump"
+		;;
+		build|b)
 			for each in ./*.erl; do
 				erlc $each
 			done
 		;;
-		run|r)
-			erl -mode Embedded -pa ./ -s entry init;
+		run|r) erl -mode Embedded -pa ./ -s main init;;
+		execute|x)
+			k clear;
+			e clean;
+			e build;
+			e run;
+			e clean;
 		;;
     # ---------------------------------------------------
     *|"")  echo "Erlang Custom Command Executor: e <Command>"
   esac
 }
+
+alias ee="e execute ; echo "

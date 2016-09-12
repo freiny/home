@@ -11,7 +11,11 @@ k(){
     rmAll)      rm -rf $2;;
 		rmGlob)
 			for each in ./$2; do
-				rm $each
+				if [ -f "$each" ]; then
+					rm $each
+				else
+					echo "" > /dev/null
+				fi
 			done
 		;;
     clear|c)      printf "\033c";;
