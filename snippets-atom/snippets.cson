@@ -1,0 +1,27 @@
+'.source.erlang':
+  'Module':
+    'prefix': 'mod;'
+    'body': '-module($1).\n$2'
+
+  'Export':
+    'prefix': 'exp;'
+    'body': '-export([$1]).\n$2'
+
+  'IO Format':
+    'prefix': 'f;'
+    'body': 'io:format("~p ~n", [$2])$1\n$3'
+
+  'Print':
+    'prefix': 'p;'
+    'body': 'io:format("~p ~n", [$1]),\n$2'
+
+  'Main Template':
+    'prefix': 'main;'
+    'body': """
+			-module(main).
+			-export([init/0]).
+
+			init() ->
+				$1
+				init:stop().
+		"""
