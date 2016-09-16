@@ -18,3 +18,11 @@ g(){
 }
 
 export GITHUB_USER_PATH=~/dev/src/github.com/freiny
+
+alias gs="git status "
+alias gd="git diff "
+alias ga="git add "
+alias gc="git commit "
+alias gl="git log "
+alias gpom="git push origin master "
+alias gpum="git pull upstream master "

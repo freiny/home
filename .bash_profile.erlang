@@ -21,9 +21,50 @@ e(){
 			e run;
 			e clean;
 		;;
+		all|a)
+			k clear;
+			e clean;
+			e build;
+			for each in ./*.beam; do
+				filename=$(basename $each);
+				rootname=${filename%.*};
+				erl -mode Embedded -pa ./ -s $rootname init
+			done
+			e clean;
+		;;
+		one|o)
+			k clear;
+			e clean;
+			erlc $2.erl
+			# filename=$(basename $2);
+			# rootname=${filename%.*};
+			erl -mode Embedded -pa ./ -s $2 init
+			e clean;
+		;;
+		debug|d)
+			k clear;
+			e clean;
+			e build;
+			e run;
+		;;
+		test|t)
+			k clear;
+			e clean;
+			e build;
+			for each in ./*.beam; do
+				filename=$(basename $each);
+				rootname=${filename%.*};
+				erl -mode Embedded -pa ./ -s $rootname test
+			done
+			e clean;
+		;;
     # ---------------------------------------------------
     *|"")  echo "Erlang Custom Command Executor: e <Command>"
   esac
 }
 
 alias ee="e execute ; echo "
+alias et="e test ; echo "
+alias ed="e debug ; echo "
+alias ea="e all ; echo "
+alias eo="e one "
