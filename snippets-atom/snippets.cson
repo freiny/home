@@ -1,22 +1,26 @@
 '.source.erlang':
   'Module':
-    'prefix': 'mod;'
+    'prefix': 'mod '
     'body': '-module($1).\n$2'
 
   'Export':
-    'prefix': 'exp;'
+    'prefix': 'exp '
     'body': '-export([$1]).\n$2'
 
-  'IO Format':
-    'prefix': 'f;'
-    'body': 'io:format("~p ~n", [$2])$1\n$3'
-
   'Print':
-    'prefix': 'p;'
+    'prefix': 'p '
     'body': 'io:format("~p ~n", [$1]),\n$2'
 
+  'Fun':
+    'prefix': 'f '
+    'body': 'fun() -> $1 end,$2'
+
+  'Output':
+    'prefix': 'o '
+    'body': '% OUTPUT: $1\n$2'
+
   'Main Template':
-    'prefix': 'main;'
+    'prefix': 'main '
     'body': """
 			-module(main).
 			-export([init/0]).
