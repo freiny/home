@@ -1,6 +1,9 @@
 #!/bin/bash
 
 #****************************************
+# TODO:
+# erl -noshell -s main init -s init stop
+#****************************************
 e(){
   case $1 in
     # ---------------------------------------------------
@@ -10,15 +13,23 @@ e(){
 		;;
 		build|b)
 			for each in ./*.erl; do
+				# erlc -P some_module.erl # VIEW PREPROCESSOR
 				erlc $each
 			done
 		;;
-		run|r) erl -mode Embedded -pa ./ -s main init;;
+		run|r) erl -mode interactive -pa ./ -s main init;;
 		execute|x)
 			k clear;
 			e clean;
 			e build;
 			e run;
+			e clean;
+		;;
+		prod|p)
+			k clear;
+			e clean;
+			e build;
+			erl -sname mynodename -mode interactive -pa ./ -s main init;
 			e clean;
 		;;
 		all|a)
@@ -41,6 +52,7 @@ e(){
 			erl -mode Embedded -pa ./ -s $2 init
 			e clean;
 		;;
+
 		debug|d)
 			k clear;
 			e clean;
@@ -64,6 +76,7 @@ e(){
 }
 
 alias ee="e execute ; echo "
+alias ep="e prod ; echo "
 alias et="e test ; echo "
 alias ed="e debug ; echo "
 alias ea="e all ; echo "
