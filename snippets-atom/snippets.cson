@@ -4,20 +4,48 @@
     'body': '-module($1).\n$2'
 
   'Export':
-    'prefix': 'exp '
+    'prefix': 'e '
     'body': '-export([$1]).\n$2'
+
+  '~':
+    'prefix': '..'
+    'body': '~$1'
+  '~n':
+    'prefix': '..n'
+    'body': '~n$1'
+  '~p':
+    'prefix': '..p'
+    'body': '~p$1'
+  '~w':
+    'prefix': '..w'
+    'body': '~w$1'
 
   'Print':
     'prefix': 'p '
     'body': 'io:format("~p ~n", [$1]),\n$2'
 
-  'Fun':
-    'prefix': 'f '
-    'body': 'fun() -> $1 end,$2'
+  'Debug ':
+    'prefix': 'd '
+    'body': """
+			Self = [node(), ?MODULE, ?FUNCTION_NAME, self()],
+			dbg:log(Self, st),
+		"""
 
   'Output':
     'prefix': 'o '
     'body': '% OUTPUT: $1\n$2'
+
+  'Fun':
+    'prefix': 'f '
+    'body': 'fun() -> $1 end,$2'
+
+  'receive ':
+    'prefix': 'r '
+    'body': """
+			receive
+				$1
+			end.
+		"""
 
   'Main Template':
     'prefix': 'main '
