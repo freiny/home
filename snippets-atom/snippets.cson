@@ -31,13 +31,17 @@
 			dbg:log(Self, st),
 		"""
 
+  'dbg ':
+    'prefix': 'dbg '
+    'body': 'dbg:log(Self, st),'
+
   'Output':
     'prefix': 'o '
     'body': '% OUTPUT: $1\n$2'
 
   'Fun':
     'prefix': 'f '
-    'body': 'fun() -> $1 end,$2'
+    'body': 'fun() -> $1 end$2'
 
   'receive ':
     'prefix': 'r '
@@ -50,10 +54,9 @@
   'Main Template':
     'prefix': 'main '
     'body': """
-			-module(main).
+			-module(main$1).
 			-export([init/0]).
 
 			init() ->
-				$1
-				init:stop().
+				$2
 		"""
