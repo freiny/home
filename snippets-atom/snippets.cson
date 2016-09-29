@@ -1,3 +1,35 @@
+'.source.js':
+
+  'output':
+    'prefix': 'op '
+    'body': "// OUTPUT: "
+
+  'object':
+    'prefix': 'o '
+    'body': "{'$1': $2}$3"
+
+  'typeof':
+    'prefix': 'to '
+    'body': "typeof "
+
+  'console.log':
+    'prefix': 'l '
+    'body': "console.log($1);\n"
+
+  'function':
+    'prefix': 'fn '
+    'body': """
+			function $1($2) {
+				$3
+			}
+			$4
+		"""
+
+
+
+
+
+
 '.source.erlang':
   'Module':
     'prefix': 'mod '

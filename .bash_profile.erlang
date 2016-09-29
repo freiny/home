@@ -17,7 +17,8 @@ e(){
 				erlc $each
 			done
 		;;
-		run|r) erl -mode interactive -pa ./ -s main init;;
+		# run|r) erl -mode interactive -pa ./ -s main init;;
+		run|r) erl -noshell -pa ./ -s main init -s init stop;;
 		execute|x)
 			k clear;
 			e clean;
@@ -66,8 +67,8 @@ e(){
 			for each in ./*.beam; do
 				filename=$(basename $each);
 				rootname=${filename%.*};
-				erl -mode Embedded -pa ./ -s $rootname test
-			done
+				erl -noshell -pa ./ -s $rootname test -s init stop;
+ 			done
 			e clean;
 		;;
     # ---------------------------------------------------
