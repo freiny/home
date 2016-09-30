@@ -6,7 +6,11 @@
 
   'object':
     'prefix': 'o '
-    'body': "{'$1': $2}$3"
+    'body': "{'$1': $2}"
+
+  'object-segment':
+    'prefix': ': '
+    'body': "'$1': $2"
 
   'typeof':
     'prefix': 'to '
@@ -15,6 +19,18 @@
   'console.log':
     'prefix': 'l '
     'body': "console.log($1);\n"
+
+  'for':
+    'prefix': 'fo '
+    'body': """
+			for ($1; $2; $3) {
+				$4
+			}
+		"""
+
+  'func':
+    'prefix': 'f '
+    'body': "function($1){ $2 }"
 
   'function':
     'prefix': 'fn '
