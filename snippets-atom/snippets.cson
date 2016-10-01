@@ -28,6 +28,22 @@
 			}
 		"""
 
+  'if':
+    'prefix': 'i '
+    'body': """
+			if ($1) {
+				$2
+			}
+		"""
+
+  'while':
+    'prefix': 'w '
+    'body': """
+			while ($1) {
+				$2
+			}
+		"""
+
   'func':
     'prefix': 'f '
     'body': "function($1){ $2 }"
