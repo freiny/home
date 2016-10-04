@@ -9,8 +9,8 @@
     'body': "{'$1': $2}"
 
   'object-segment':
-    'prefix': ': '
-    'body': "'$1': $2"
+    'prefix': ' oo'
+    'body': ", '$1': $2"
 
   'typeof':
     'prefix': 'to '
@@ -18,7 +18,7 @@
 
   'console.log':
     'prefix': 'l '
-    'body': "console.log($1);\n"
+    'body': "console.log($1);"
 
   'for':
     'prefix': 'fo '
@@ -44,6 +44,10 @@
 			}
 		"""
 
+  'prototype':
+    'prefix': 'pt '
+    'body': "prototype"
+
   'func':
     'prefix': 'f '
     'body': "function($1){ $2 }"
@@ -56,6 +60,24 @@
 			}
 			$4
 		"""
+
+  'function':
+    'prefix': 'f; '
+    'body': """
+			function($1) {
+				$2
+			};
+		"""
+
+
+
+  'arguments':
+    'prefix': 'a '
+    'body': "arguments"
+
+  'arguments_':
+    'prefix': 'arg '
+    'body': "arguments[$1]"
 
 
 
