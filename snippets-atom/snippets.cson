@@ -1,8 +1,15 @@
 '.source.js':
+  'console.log':
+    'prefix': 'l '
+    'body': "console.log($1);"
 
   'output':
     'prefix': 'op '
     'body': "// OUTPUT: "
+
+  'require':
+    'prefix': 'r '
+    'body': "require('$1');\n$2"
 
   'object':
     'prefix': 'o '
@@ -16,9 +23,6 @@
     'prefix': 'to '
     'body': "typeof "
 
-  'console.log':
-    'prefix': 'l '
-    'body': "console.log($1);"
 
   'for':
     'prefix': 'fo '
@@ -36,6 +40,10 @@
 			}
 		"""
 
+  'if-':
+    'prefix': '? '
+    'body': "( $1 === $2 ) ? $3 : $4;"
+
   'while':
     'prefix': 'w '
     'body': """
@@ -45,7 +53,7 @@
 		"""
 
   'prototype':
-    'prefix': 'pt '
+    'prefix': 'p '
     'body': "prototype"
 
   'func':
