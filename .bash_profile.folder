@@ -7,11 +7,7 @@ f(){
 
 	case $1 in
 	# ---------------------------------------------------
-	# j)  echo $GITHUB_USER_PATH/dockerpack-apps/$2;;
-	# j)  echo $GITHUB_USER_PATH/koderkave-fe-conf/$2;;
-	# j)  echo $GITHUB_USER_PATH/gce-deb-erlang/$2;;
-	# j)  echo $GITHUB_USER_PATH/erlang-notes/lang/$2;;
-	j)  echo $GITHUB_USER_PATH/eps/src/$2;;
+	j)  echo $GITHUB_USER_PATH/nodejs-api-notes/projects/$2;;
 	f)	docker exec -it koderkavefeconf_rp1_1 /bin/bash && docker start koderkavefeconf_rp1_1;;
 	g)	docker stop koderkavefeconf_rp1_1; docker start koderkavefeconf_rp1_1;;
 	# ---------------------------------------------------
