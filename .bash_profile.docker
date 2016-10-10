@@ -2,10 +2,6 @@
 #****************************************
 # Freiny Docker Utility - Custom Command Executor: fdu <Command> [Arguments...]
 
-alias d="fdu "
-alias dk="docker "
-alias dc="docker-compose "
-
 fdu(){
   case $1 in
     # ---------------------------------------------------
@@ -98,3 +94,18 @@ fdu(){
     *|"")    echo "Freiny Docker Utility - Custom Command Executor: fdu <Command> [Arguments...]"
   esac
 }
+
+alias d="fdu "
+alias dk="docker "
+alias dc="docker-compose "
+alias dv="d v "
+
+alias .c="./clean "
+alias .i="./init "
+alias .ci="chmod 744 init; chmod 744 clean;"
+alias r="chmod 744 run;"
+alias rc="./run clean "
+alias ri="./run init "
+alias rl="./run load "
+
+export DOCKER_IMAGE_PATH=$(secrets docker_image_path)

@@ -1,5 +1,4 @@
 #****************************************
-alias rs="exec bash --login "
 cd ~
 #****************************************
 export GOPATH=~/dev
@@ -15,7 +14,8 @@ export PATH=$PATH:/usr/local/go/bin
 . ~/.bash_profile.erlang
 #****************************************
 alias nb="nano ~/.bash_profile "
-alias rs="exec bash --login "
+alias res="exec bash --login "
+alias reset="exec bash --login "
 #****************************************
 /()        { cd /; }
 .()        { cd ./..; }
