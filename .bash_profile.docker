@@ -107,5 +107,8 @@ alias r="chmod 744 run;"
 alias rc="./run clean "
 alias ri="./run init "
 alias rl="./run load "
+alias rs="./run save "
+alias ru="./run up "
+
 
 export DOCKER_IMAGE_PATH=$(secrets docker_image_path)
