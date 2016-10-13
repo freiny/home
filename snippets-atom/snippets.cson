@@ -29,6 +29,30 @@
     'prefix': 'd; '
     'body': "DATABASES "
 
+  'insert':
+    'prefix': 'i '
+    'body': "INSERT "
+
+  'into':
+    'prefix': 'it '
+    'body': "INTO "
+
+  'values':
+    'prefix': 'v; '
+    'body': "VALUES "
+
+  'select':
+    'prefix': 's '
+    'body': "SELECT "
+
+  'from':
+    'prefix': 'f '
+    'body': "FROM "
+
+  'where':
+    'prefix': 'w '
+    'body': "WHERE "
+
   'not':
     'prefix': 'n '
     'body': "NOT "
@@ -38,7 +62,7 @@
     'body': "NULL "
 
   'int':
-    'prefix': 'i '
+    'prefix': 'int '
     'body': "INT "
 
   'varchar':
@@ -54,8 +78,12 @@
     'body': "KEY "
 
   'show':
-    'prefix': 's '
+    'prefix': 'show '
     'body': "SHOW "
+
+  'tables in mydb':
+    'prefix': 'tm '
+    'body': "Tables_in_mydb "
 
   # '':
   #   'prefix': ' '
