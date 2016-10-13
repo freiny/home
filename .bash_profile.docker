@@ -112,3 +112,5 @@ alias ru="./run up "
 
 
 export DOCKER_IMAGE_PATH=$(secrets docker_image_path)
+export MYSQL_USER_NAME=$(secrets mysql_user_name)
+export MYSQL_USER_PASSWORD=$(secrets mysql_user_password)
