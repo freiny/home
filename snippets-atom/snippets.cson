@@ -1,3 +1,69 @@
+# ************************************************
+# SQL
+
+'.source.sql':
+
+  'output':
+    'prefix': 'op '
+    'body': "-- OUTPUT: "
+
+  'use':
+    'prefix': 'u '
+    'body': "USE "
+
+  'create':
+    'prefix': 'c '
+    'body': "CREATE "
+
+  'table':
+    'prefix': 't '
+    'body': "TABLE "
+  'tables':
+    'prefix': 't; '
+    'body': "TABLES "
+
+  'database':
+    'prefix': 'd '
+    'body': "DATABASE "
+  'databases':
+    'prefix': 'd; '
+    'body': "DATABASES "
+
+  'not':
+    'prefix': 'n '
+    'body': "NOT "
+
+  'null':
+    'prefix': 'nl '
+    'body': "NULL "
+
+  'int':
+    'prefix': 'i '
+    'body': "INT "
+
+  'varchar':
+    'prefix': 'vc '
+    'body': "VARCHAR "
+
+  'primary':
+    'prefix': 'p '
+    'body': "PRIMARY "
+
+  'key':
+    'prefix': 'k '
+    'body': "KEY "
+
+  'show':
+    'prefix': 's '
+    'body': "SHOW "
+
+  # '':
+  #   'prefix': ' '
+  #   'body': " "
+
+# ************************************************
+# JAVASCRIPT
+
 '.source.js':
   'console.log':
     'prefix': 'l '
@@ -77,8 +143,6 @@
 			};
 		"""
 
-
-
   'arguments':
     'prefix': 'a '
     'body': "arguments"
@@ -87,10 +151,8 @@
     'prefix': 'arg '
     'body': "arguments[$1]"
 
-
-
-
-
+# ************************************************
+# ERLANG
 
 '.source.erlang':
   'Module':
@@ -154,3 +216,5 @@
 			init() ->
 				$2
 		"""
+
+# ************************************************
