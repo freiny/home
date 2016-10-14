@@ -6,6 +6,11 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/dev/bin
 export PATH=$PATH:/usr/local/go/bin
 
+export TESTA=HELLO
+export TESTB=HI
+export TESTC=HEY
+export TESTD=WORLD
+
 . ~/.bash_profile.folder
 . ~/.bash_profile.cmd
 . ~/.bash_profile.new
