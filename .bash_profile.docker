@@ -45,7 +45,7 @@ fdu(){
     VI)
       # View gzipped images
       tpwd=$PWD;cd $(f images);ls -a;cd $tpwd;;
-    vc)
+  	vc)
       # View containers
       docker ps -a;;
     v)
@@ -99,6 +99,7 @@ alias d="fdu "
 alias dk="docker "
 alias dc="docker-compose "
 alias dv="d v "
+alias dcc='d cc'
 
 alias .c="./clean "
 alias .i="./init "
